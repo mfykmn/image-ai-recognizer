@@ -1,5 +1,7 @@
 # Image AI Recognizer
 
+![画像](image.png)
+
 ## 環境構築
 
 ```bash
