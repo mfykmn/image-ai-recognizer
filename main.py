@@ -41,9 +41,8 @@ def main():
     
     llm = ChatOpenAI(
         temperature=0,
-        model="deepseek-chat",
-        openai_api_key=os.getenv("DEEP_SEEK_API_KEY"),
-        openai_api_base="https://api.deepseek.com",
+        model="gpt-4o",
+        openai_api_key=os.getenv("OPENAI_API_KEY"),
         max_tokens=512,
     )
     
@@ -96,13 +95,13 @@ def main():
         st.write(user_input)
         st.image(
             upload_file,
-            use_column_width="auto",
+            use_container_width="auto",
         )
         st.markdown("### DALL-E 3 で生成した画像")
         st.image(
             dalle3_image_url,
             caption=image_prompt,
-            use_column_width="auto",
+            use_container_width="auto",
         )
 
 if __name__ == "__main__":
